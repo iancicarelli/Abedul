@@ -25,3 +25,17 @@ El resultado es un nuevo archivo Excel listo para su uso.
 - **Tkinter** y `ttkthemes` para la interfaz gráfica
 - **Pandas** para la manipulación de archivos Excel
 
+## 📷 Capturas de formato junto con interfaz 
+
+### Entrada
+
+![imagen](https://github.com/iancicarelli/Abedul/blob/main/img/Entrada.png)
+
+### Interfaz 
+
+![imagen](https://github.com/iancicarelli/Abedul/blob/main/img/IDE.png)
+
+### Salida
+
+![imagen](https://github.com/iancicarelli/Abedul/blob/main/img/Salida.png)
+
