@@ -54,4 +54,6 @@ class ExcelProcessor:
             cell.font = Font(bold=True)  # Cabecera en negrita
 
     def get_sheet(self):
+        if self.sheet is None:
+            raise ValueError("Error: No se ha cargado una hoja de Excel válida ERR(GS/EX/PROCESSOR 57).")
         return self.sheet

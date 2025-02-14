@@ -10,17 +10,29 @@ class DataProcessor:
 
     
     def get_processed_data(self):
-        # Leer el archivo Excel
+    # Leer el archivo Excel
         self.excel_processor.read_excel()
         sheet = self.excel_processor.get_sheet()
+
+    # Verificar si la hoja se cargó correctamente
+        if sheet is None:
+            print("Error: No se pudo cargar la hoja del archivo Excel ERR(DATA/PROCESS/19).")
+            return []
+
         processed_data = []  # Lista para almacenar los datos procesados
+    
         # Iterar sobre las filas del archivo Excel (comenzando desde la fila 2 para saltar los encabezados)
         for row in sheet.iter_rows(min_row=2, max_row=sheet.max_row):
             codigo = row[1].value  # Columna B (Código)
             amount = row[5].value  # Columna F (amount)
+        
+            if codigo is None or amount is None:
+                print(f"Fila con datos faltantes: {row}")  # Depuración
+
             processed_data.append({"codigo": codigo, "amount": amount})
+
         return processed_data
-    
+
     def write_processed_data(self,id_local):
         processed_data = self.get_processed_data()
         

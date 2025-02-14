@@ -53,7 +53,6 @@ class MenuApp:
         style.configure('TLabel', 
                         font=('Helvetica', 10), 
                         padding=5, 
-                       # background='#44A46B',  # Igual al fondo de la app
                         foreground='#000000')  # Color de texto recomendado
 
         # Estilo para las entradas de texto
